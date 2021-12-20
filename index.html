@@ -382,7 +382,9 @@
                 }
                 flag=46;
             }else{
-                labelContainer.childNodes[0].innerHTML="文字を見せてください"
+                if(flag==0){
+                    labelContainer.childNodes[0].innerHTML="文字を見せてください"
+                }
             }
         }
         
