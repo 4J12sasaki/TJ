@@ -55,193 +55,332 @@
         }
 
         // run the webcam image through the image model
+        var flag =0
         async function predict() {
             // predict can take in an image, video or canvas html element
             const prediction = await model.predict(webcam.canvas);
             if(prediction[0].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="あ/a"
-                var audio = new Audio('あ.mp3');
-                audio.play();
+                if(flag!=1){
+                    labelContainer.childNodes[0].innerHTML="あ/a"
+                    var audio = new Audio('あ.mp3');
+                    audio.play();
+                }
+                flag=1;
             }else if(prediction[1].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="い/i"
-                var audio = new Audio('い.mp3');
-                audio.play();
+                if(flag!=2){
+                    labelContainer.childNodes[0].innerHTML="い/i"
+                    var audio = new Audio('い.mp3');
+                    audio.play();
+                }
+                flag=2;
             }else if(prediction[2].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="う/u"
-                var audio = new Audio('う.mp3');
-                audio.play();
+                if(flag!=3){
+                    labelContainer.childNodes[0].innerHTML="う/u"
+                    var audio = new Audio('う.mp3');
+                    audio.play();
+                }
+                flag=3;
             }else if(prediction[3].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="え/e"
-                var audio = new Audio('え.mp3');
-                audio.play();
+                if(flag!=4){
+                    labelContainer.childNodes[0].innerHTML="え/e"
+                    var audio = new Audio('え.mp3');
+                    audio.play();
+                }
+                flag=4;
             }else if(prediction[4].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="お/o"
-                var audio = new Audio('お.mp3');
-                audio.play();
+                if(flag!=5){
+                    labelContainer.childNodes[0].innerHTML="お/o"
+                    var audio = new Audio('お.mp3');
+                    audio.play();
+                }
+                flag=5;
             }else if(prediction[5].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="か/ka"
-                var audio = new Audio('か.mp3');
-                audio.play();
+                if(flag!=6){
+                    labelContainer.childNodes[0].innerHTML="か/ka"
+                    var audio = new Audio('か.mp3');
+                    audio.play();
+                }
+                flag=6;
             }else if(prediction[6].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="き/ki"
-                var audio = new Audio('き.mp3');
-                audio.play();
+                if(flag!=7){
+                    labelContainer.childNodes[0].innerHTML="き/ki"
+                    var audio = new Audio('き.mp3');
+                    audio.play();
+                }
+                flag=7;
             }else if(prediction[7].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="く/ku"
-                var audio = new Audio('く.mp3');
-                audio.play();
+                if(flag!=8){
+                    labelContainer.childNodes[0].innerHTML="く/ku"
+                    var audio = new Audio('く.mp3');
+                    audio.play();
+                }
+                flag=8;
             }else if(prediction[8].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="け/ke"
-                var audio = new Audio('け.mp3');
-                audio.play();
+                if(flag!=9){
+                    labelContainer.childNodes[0].innerHTML="け/ke"
+                    var audio = new Audio('け.mp3');
+                    audio.play();
+                }
+                flag=9;
             }else if(prediction[9].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="こ/ko"
-                var audio = new Audio('こ.mp3');
-                audio.play();
+                if(flag!=10){
+                    labelContainer.childNodes[0].innerHTML="こ/ko"
+                    var audio = new Audio('こ.mp3');
+                    audio.play();
+                }
+                flag=10;
             }else if(prediction[10].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="さ/sa"
-                var audio = new Audio('さ.mp3');
-                audio.play();
+                if(flag!=11){
+                    labelContainer.childNodes[0].innerHTML="さ/sa"
+                    var audio = new Audio('さ.mp3');
+                    audio.play();
+                }
+                flag=11;
             }else if(prediction[11].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="し/shi"
-                var audio = new Audio('し.mp3');
-                audio.play();
+                if(flag!=12){
+                    labelContainer.childNodes[0].innerHTML="し/shi"
+                    var audio = new Audio('し.mp3');
+                    audio.play();
+                }
+                flag=12;
             }else if(prediction[12].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="す/su"
-                var audio = new Audio('す.mp3');
-                audio.play();
+                if(flag!=13){
+                    labelContainer.childNodes[0].innerHTML="す/su"
+                    var audio = new Audio('す.mp3');
+                    audio.play();
+                }
+                flag=13;
             }else if(prediction[13].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="せ/se"
-                var audio = new Audio('せ.mp3');
-                audio.play();
+                if(flag!=14){
+                    labelContainer.childNodes[0].innerHTML="せ/se"
+                    var audio = new Audio('せ.mp3');
+                    audio.play();
+                }
+                flag=14;
             }else if(prediction[14].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="そ/so"
-                var audio = new Audio('そ.mp3');
-                audio.play();
+                if(flag!=15){
+                    labelContainer.childNodes[0].innerHTML="そ/so"
+                    var audio = new Audio('そ.mp3');
+                    audio.play();
+                }
+                flag=15;
             }else if(prediction[15].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="た/ta"
-                var audio = new Audio('た.mp3');
-                audio.play();
+                if(flag!=16){
+                    labelContainer.childNodes[0].innerHTML="た/ta"
+                    var audio = new Audio('た.mp3');
+                    audio.play();
+                }
+                flag=16;
             }else if(prediction[16].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ち/chi"
-                var audio = new Audio('ち.mp3');
-                audio.play();
+                if(flag!=17){
+                    labelContainer.childNodes[0].innerHTML="ち/chi"
+                    var audio = new Audio('ち.mp3');
+                    audio.play();
+                }
+                flag!=17;
             }else if(prediction[17].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="つ/tsu"
-                var audio = new Audio('つ.mp3');
-                audio.play();
+                if(flag!=18){
+                    labelContainer.childNodes[0].innerHTML="つ/tsu"
+                    var audio = new Audio('つ.mp3');
+                    audio.play();
+                }
+                flag!=18;
             }else if(prediction[18].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="て/te"
-                var audio = new Audio('て.mp3');
-                audio.play();
+                if(flag!=19){
+                    labelContainer.childNodes[0].innerHTML="て/te"
+                    var audio = new Audio('て.mp3');
+                    audio.play();
+                }
+                flag!=19;
             }else if(prediction[19].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="と/to"
-                var audio = new Audio('と.mp3');
-                audio.play();
+                if(flag!=20){
+                    labelContainer.childNodes[0].innerHTML="と/to"
+                    var audio = new Audio('と.mp3');
+                    audio.play();
+                }
+                flag!=20;
             }else if(prediction[20].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="な/na"
-                var audio = new Audio('な.mp3');
-                audio.play();
+                if(flag!=21){
+                    labelContainer.childNodes[0].innerHTML="な/na"
+                    var audio = new Audio('な.mp3');
+                    audio.play();
+                }
+                flag=21;
             }else if(prediction[21].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="に/ni"
-                var audio = new Audio('に.mp3');
-                audio.play();
+                if(flag!=22){
+                    labelContainer.childNodes[0].innerHTML="に/ni"
+                    var audio = new Audio('に.mp3');
+                    audio.play();
+                }
+                flag=22;
             }else if(prediction[22].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ぬ/nu"
-                var audio = new Audio('ぬ.mp3');
-                audio.play();
+                if(flag!=23){
+                    labelContainer.childNodes[0].innerHTML="ぬ/nu"
+                    var audio = new Audio('ぬ.mp3');
+                    audio.play();
+                }
+                flag=23;
             }else if(prediction[23].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ね/ne"
-                var audio = new Audio('ね.mp3');
-                audio.play();
+                if(flag!=24){
+                    labelContainer.childNodes[0].innerHTML="ね/ne"
+                    var audio = new Audio('ね.mp3');
+                    audio.play();
+                }
+                flag=24;
             }else if(prediction[24].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="の/no"
-                var audio = new Audio('の.mp3');
-                audio.play();
+                if(flag!=25){
+                    labelContainer.childNodes[0].innerHTML="の/no"
+                    var audio = new Audio('の.mp3');
+                    audio.play();
+                }
+                flag=25;
             }else if(prediction[25].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="は/ha"
-                var audio = new Audio('は.mp3');
-                audio.play();
+                if(flag!=26){
+                    labelContainer.childNodes[0].innerHTML="は/ha"
+                    var audio = new Audio('は.mp3');
+                    audio.play();
+                }
+                flag=26;
             }else if(prediction[26].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ひ/hi"
-                var audio = new Audio('ひ.mp3');
-                audio.play();
+                if(flag!=27){
+                    labelContainer.childNodes[0].innerHTML="ひ/hi"
+                    var audio = new Audio('ひ.mp3');
+                    audio.play();
+                }
+                flag=27;
             }else if(prediction[27].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ふ/hu"
-                var audio = new Audio('ふ.mp3');
-                audio.play();
+                if(flag!=28){
+                    labelContainer.childNodes[0].innerHTML="ふ/hu"
+                    var audio = new Audio('ふ.mp3');
+                    audio.play();
+                }
+                flag=28;
             }else if(prediction[28].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="へ/he"
-                var audio = new Audio('へ.mp3');
-                audio.play();
+                if(flag!=29){
+                    labelContainer.childNodes[0].innerHTML="へ/he"
+                    var audio = new Audio('へ.mp3');
+                    audio.play();
+                }
+                flag=29;
             }else if(prediction[29].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ほ/ho"
-                var audio = new Audio('ほ.mp3');
-                audio.play();
+                if(flag!=30){
+                    labelContainer.childNodes[0].innerHTML="ほ/ho"
+                    var audio = new Audio('ほ.mp3');
+                    audio.play();
+                }
+                flag=30;
             }else if(prediction[30].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ま/ma"
-                var audio = new Audio('ま.mp3');
-                audio.play();
+                if(flag!=31){
+                    labelContainer.childNodes[0].innerHTML="ま/ma"
+                    var audio = new Audio('ま.mp3');
+                    audio.play();
+                }
+                flag=31;
             }else if(prediction[31].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="み/mi"
-                var audio = new Audio('み.mp3');
-                audio.play();
+                if(flag!=32){
+                    labelContainer.childNodes[0].innerHTML="み/mi"
+                    var audio = new Audio('み.mp3');
+                    audio.play();
+                }
+                flag=32;
             }else if(prediction[32].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="む/mu"
-                var audio = new Audio('む.mp3');
-                audio.play();
+                if(flag!=33){
+                    labelContainer.childNodes[0].innerHTML="む/mu"
+                    var audio = new Audio('む.mp3');
+                    audio.play();
+                }
+                flag=33;
             }else if(prediction[33].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="め/me"
-                var audio = new Audio('め.mp3');
-                audio.play();
+                if(flag!=34){
+                    labelContainer.childNodes[0].innerHTML="め/me"
+                    var audio = new Audio('め.mp3');
+                    audio.play();
+                }
+                flag=34;
             }else if(prediction[34].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="も/mo"
-                var audio = new Audio('も.mp3');
-                audio.play();
+                if(flag!=35){
+                    labelContainer.childNodes[0].innerHTML="も/mo"
+                    var audio = new Audio('も.mp3');
+                    audio.play();
+                }
+                flag=35;
             }else if(prediction[35].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="や/ya"
-                var audio = new Audio('や.mp3');
-                audio.play();
+                if(flag!=36){
+                    labelContainer.childNodes[0].innerHTML="や/ya"
+                    var audio = new Audio('や.mp3');
+                    audio.play();
+                }
+                flag=36;
             }else if(prediction[36].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ゆ/yu"
-                var audio = new Audio('ゆ.mp3');
-                audio.play();
+                if(flag!=37){
+                    labelContainer.childNodes[0].innerHTML="ゆ/yu"
+                    var audio = new Audio('ゆ.mp3');
+                    audio.play();
+                }
+                flag=37;
             }else if(prediction[37].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="よ/yo"
-                var audio = new Audio('よ.mp3');
-                audio.play();
+                if(flag!=38){
+                    labelContainer.childNodes[0].innerHTML="よ/yo"
+                    var audio = new Audio('よ.mp3');
+                    audio.play();
+                }
+                flag=38;
             }else if(prediction[38].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ら/ra"
-                var audio = new Audio('ら.mp3');
-                audio.play();
+                if(flag!=39){
+                    labelContainer.childNodes[0].innerHTML="ら/ra"
+                    var audio = new Audio('ら.mp3');
+                    audio.play();
+                }
+                flag=39;
             }else if(prediction[39].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="り/ri"
-                var audio = new Audio('り.mp3');
-                audio.play();
+                if(flag!=40){
+                    labelContainer.childNodes[0].innerHTML="り/ri"
+                    var audio = new Audio('り.mp3');
+                    audio.play();
+                }
+                flag=40;
             }else if(prediction[40].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="る/ru"
-                var audio = new Audio('る.mp3');
-                audio.play();
+                if(flag!=41){
+                    labelContainer.childNodes[0].innerHTML="る/ru"
+                    var audio = new Audio('る.mp3');
+                    audio.play();
+                }
+                flag=41;
             }else if(prediction[41].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="れ/re"
-                var audio = new Audio('れ.mp3');
-                audio.play();
+                if(flag!=42){
+                    labelContainer.childNodes[0].innerHTML="れ/re"
+                    var audio = new Audio('れ.mp3');
+                    audio.play();
+                }
+                flag=42;
             }else if(prediction[42].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ろ/ro"
-                var audio = new Audio('ろ.mp3');
-                audio.play();
+                if(flag!=43){
+                    labelContainer.childNodes[0].innerHTML="ろ/ro"
+                    var audio = new Audio('ろ.mp3');
+                    audio.play();
+                }
+                flag=43;
             }else if(prediction[43].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="わ/wa"
-                var audio = new Audio('わ.mp3');
-                audio.play();
+                if(flag!=44){
+                    labelContainer.childNodes[0].innerHTML="わ/wa"
+                    var audio = new Audio('わ.mp3');
+                    audio.play();
+                }
+                flag=44;
             }else if(prediction[44].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="を/wo"
-                var audio = new Audio('を.mp3');
-                audio.play();
+                if(flag!=45){
+                    labelContainer.childNodes[0].innerHTML="を/wo"
+                    var audio = new Audio('を.mp3');
+                    audio.play();
+                }
+                flag=45;
             }else if(prediction[45].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="ん/n"
-                var audio = new Audio('ん.mp3');
-                audio.play();
+                if(flag!=46){
+                    labelContainer.childNodes[0].innerHTML="ん/n"
+                    var audio = new Audio('ん.mp3');
+                    audio.play();
+                }
+                flag=46;
             }else{
                 labelContainer.childNodes[0].innerHTML="文字を見せてください"
             }
