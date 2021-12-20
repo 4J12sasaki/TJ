@@ -233,7 +233,7 @@
                 var audio = new Audio('れ.mp3');
                 audio.play();
             }else if(prediction[42].probability.toFixed(2)>0.80){
-                labelContainer.childNodes[0].innerHTML="よ/yo"
+                labelContainer.childNodes[0].innerHTML="ろ/ro"
                 var audio = new Audio('ろ.mp3');
                 audio.play();
             }else if(prediction[43].probability.toFixed(2)>0.80){
@@ -248,6 +248,8 @@
                 labelContainer.childNodes[0].innerHTML="ん/n"
                 var audio = new Audio('ん.mp3');
                 audio.play();
+            }else{
+                labelContainer.childNodes[0].innerHTML="文字を見せてください"
             }
         }
         
